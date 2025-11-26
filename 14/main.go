@@ -24,13 +24,12 @@ func getType(param any) {
 			elemType := t.Elem()
 			fmt.Printf("Слайс: []%s", elemType)
 		case reflect.Map:
-			elemType := t.Elem()
 			keyType := t.Key()
+			elemType := t.Elem()
 			fmt.Printf("Хеш-таблица: map[%s]%s", keyType, elemType)
 		default:
 			fmt.Printf("Неизвестный тип %s", t)
 		}
-		
 	}
 
 	fmt.Println()
