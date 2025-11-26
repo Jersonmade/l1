@@ -13,6 +13,7 @@ func main() {
 	b = a - b
 	a = a - b
 	
+	fmt.Println("Переменные после обмена значениями")
 	fmt.Println("a = ", a)
 	fmt.Println("b = ", b)
 }
