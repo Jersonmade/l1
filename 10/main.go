@@ -10,7 +10,13 @@ func main() {
 	tempsMap := make(map[int][]float64)
 
 	for _, temperature := range temperatures {
-		key := int(math.Floor(temperature/10)) * 10
+		var key int
+		
+		if temperature < 0 {
+			key = int(math.Ceil(temperature / 10.0)) * 10
+		} else {
+			key = int(math.Floor(temperature / 10.0)) * 10
+		}
 		tempsMap[key] = append(tempsMap[key], temperature)
 	}
 
