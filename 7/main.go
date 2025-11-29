@@ -14,7 +14,7 @@ func main() {
 
 	initTime := time.Now()
 
-	for i := 0; i < 2_000; i++ {
+	for i := range 2_000 {
 		wg.Add(1)
 		go func(key string, value int) {
 			defer wg.Done()
